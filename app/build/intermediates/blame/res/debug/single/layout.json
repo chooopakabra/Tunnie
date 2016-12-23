@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "C:\\Users\\Lenovo\\Desktop\\Extandush\\Tunnie\\app\\build\\intermediates\\res\\merged\\debug\\layout\\main_activity.xml",
+        "source": "C:\\Users\\Lenovo\\Desktop\\Extandush\\Tunnie\\app\\src\\main\\res\\layout\\main_activity.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\Desktop\\Extandush\\Tunnie\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
+        "source": "C:\\Users\\Lenovo\\Desktop\\Extandush\\Tunnie\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\Desktop\\Extandush\\Tunnie\\app\\build\\intermediates\\res\\merged\\debug\\layout\\favorite_activity.xml",
+        "source": "C:\\Users\\Lenovo\\Desktop\\Extandush\\Tunnie\\app\\src\\main\\res\\layout\\favorite_activity.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\Desktop\\Extandush\\Tunnie\\app\\build\\intermediates\\res\\merged\\debug\\layout\\chords_activity.xml",
+        "source": "C:\\Users\\Lenovo\\Desktop\\Extandush\\Tunnie\\app\\src\\main\\res\\layout\\chords_activity.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\Desktop\\Extandush\\Tunnie\\app\\build\\intermediates\\res\\merged\\debug\\layout\\menu_custome_view.xml",
+        "source": "C:\\Users\\Lenovo\\Desktop\\Extandush\\Tunnie\\app\\src\\main\\res\\layout\\menu_custome_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\Desktop\\Extandush\\Tunnie\\app\\build\\intermediates\\res\\merged\\debug\\layout\\chord_display_custume_view.xml",
+        "source": "C:\\Users\\Lenovo\\Desktop\\Extandush\\Tunnie\\app\\src\\main\\res\\layout\\chord_display_custume_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\Desktop\\Extandush\\Tunnie\\app\\build\\intermediates\\res\\merged\\debug\\layout\\song_custome_view.xml",
+        "source": "C:\\Users\\Lenovo\\Desktop\\Extandush\\Tunnie\\app\\src\\main\\res\\layout\\song_custome_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\Desktop\\Extandush\\Tunnie\\app\\build\\intermediates\\res\\merged\\debug\\layout\\song_vers_custome_view.xml",
+        "source": "C:\\Users\\Lenovo\\Desktop\\Extandush\\Tunnie\\app\\src\\main\\res\\layout\\song_vers_custome_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\Desktop\\Extandush\\Tunnie\\app\\build\\intermediates\\res\\merged\\debug\\layout\\songvers_activity.xml",
+        "source": "C:\\Users\\Lenovo\\Desktop\\Extandush\\Tunnie\\app\\src\\main\\res\\layout\\songvers_activity.xml"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\Desktop\\Extandush\\Tunnie\\app\\build\\intermediates\\res\\merged\\debug\\layout\\get_down_with_the_boogie.xml",
+        "source": "C:\\Users\\Lenovo\\Desktop\\Extandush\\Tunnie\\app\\src\\main\\res\\layout\\get_down_with_the_boogie.xml"
+    }
+]
