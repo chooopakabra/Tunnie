@@ -1,3 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
 
+    <item
+        jar="C:\Users\Lenovo\Documents\Bandmanage\Tunnie\app\libs\android-zoom-view.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="8ea0253f9d7cff1661f29d4f090773471164f785">
+        <dex dex="C:\Users\Lenovo\Documents\Bandmanage\Tunnie\app\build\intermediates\pre-dexed\debug\android-zoom-view_2b86336a2e4b8bc18f6009a51c06b86a9542dae8.jar" />
+    </item>
+    <item
+        jar="C:\Users\Lenovo\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-v4\19.1.0\support-v4-19.1.0.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67">
+        <dex dex="C:\Users\Lenovo\Documents\Bandmanage\Tunnie\app\build\intermediates\pre-dexed\debug\support-v4-19.1.0_93f15369d8a2edc4962e426020f378984465305c.jar" />
+    </item>
+    <item
+        jar="C:\Users\Lenovo\Documents\Bandmanage\Tunnie\app\libs\jsoup-1.8.1.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="3d57e95c0f150b885ccdbda7a12bef353fd31d02">
+        <dex dex="C:\Users\Lenovo\Documents\Bandmanage\Tunnie\app\build\intermediates\pre-dexed\debug\jsoup-1.8.1_896b8996455ba9927b0f75248eb22ffe62ee20cc.jar" />
+    </item>
+
+</items>
