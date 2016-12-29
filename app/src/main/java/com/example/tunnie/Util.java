@@ -10,7 +10,7 @@ import java.util.LinkedList;
 public class Util
 {
   public static LinkedList<JSONObject> knownChordsList = new LinkedList();
-  
+
   private static int compareTonesToKnown(String[] paramArrayOfString)
   {
     String[] arrayOfString = getKnownChords();
@@ -44,7 +44,7 @@ public class Util
     }
     return j;
   }
-  
+
   public static JSONObject getCurrentChord(String paramString)
   {
     int i = 0;
@@ -65,21 +65,21 @@ public class Util
     }
     return null;
   }
-  
+
   public static String[] getKnownChords()
   {
     String[] arrayOfString = new String[knownChordsList.size()];
     for (int i = 0 ;i < arrayOfString.length; i++)
     {
-        try
-        {
-          arrayOfString[i] = ((JSONObject)knownChordsList.get(i)).getString("symbol").trim();
-        }
-        catch (JSONException localJSONException){localJSONException.printStackTrace();}
+      try
+      {
+        arrayOfString[i] = ((JSONObject)knownChordsList.get(i)).getString("symbol").trim();
+      }
+      catch (JSONException localJSONException){localJSONException.printStackTrace();}
     }
     return arrayOfString;
   }
-  
+
   static String[] splitSymbolToToneNType(String paramString)
   {
     paramString.replaceAll(" ", "");
@@ -98,7 +98,7 @@ public class Util
     arrayOfString[1] = paramString.substring(1);
     return arrayOfString;
   }
-  
+
   void setTranspositionedStringArr(String[] paramArrayOfString, LinearLayout paramLinearLayout)
   {
     int i = 0;

@@ -14,13 +14,13 @@ public class SongCustomView extends LinearLayout {
 
 	private boolean isPressed = false;
 	private Song song;
-	
+
 	class Layout
 	{
 		public Layout()
 		{
 			songNameTV = (TextView)findViewById(R.id.SongNameTV);
-			songArtistTV = (TextView)findViewById(R.id.SongArtistTV);	
+			songArtistTV = (TextView)findViewById(R.id.SongArtistTV);
 			songVersLayout = (LinearLayout)findViewById(R.id.songVersLayout);
 			songIdLayout = (LinearLayout)findViewById(R.id.songIdLayout);
 			openSongVersLayoutBtn = (Button)findViewById(R.id.button1);
@@ -29,17 +29,17 @@ public class SongCustomView extends LinearLayout {
 		TextView songNameTV, songArtistTV, textView3;
 		LinearLayout songVersLayout, songIdLayout;
 	}
-	
+
 	class Events
 	{
 		public Events()
 		{
-			l.openSongVersLayoutBtn.setOnClickListener(new OnClickListener() 
+			l.openSongVersLayoutBtn.setOnClickListener(new OnClickListener()
 			{
 				@Override
-				public void onClick(View v) 
+				public void onClick(View v)
 				{
-						if (isPressed)
+					if (isPressed)
 					{
 						l.songVersLayout.setVisibility(GONE);
 						isPressed =false;
@@ -54,17 +54,17 @@ public class SongCustomView extends LinearLayout {
 		}
 	}
 	Layout l;
-	Events e;	
-	
-	public SongCustomView(Context context, AttributeSet attrs, Song s) 
+	Events e;
+
+	public SongCustomView(Context context, AttributeSet attrs, Song s)
 	{
-		super(context, attrs);		
-		
+		super(context, attrs);
+
 		LayoutInflater inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 		inflater.inflate(R.layout.song_custome_view, this);
-		
+
 		l = new Layout(); e = new Events();
-		
+
 		setSong(s);
 		displaySongDetails();
 	}
@@ -77,7 +77,7 @@ public class SongCustomView extends LinearLayout {
 		this.song = song;
 		displaySongDetails();
 	}
-	
+
 	private void displaySongDetails()
 	{
 		l.songArtistTV.setText(song.getSongName());

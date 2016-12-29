@@ -1,8 +1,5 @@
 package com.example.tunnie;
 
-import lists.FavoriteSongVersList;
-import lists.SongList;
-import logic.SongVers;
 import android.content.Context;
 import android.content.Intent;
 import android.util.AttributeSet;
@@ -13,13 +10,17 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import lists.FavoriteSongVersList;
+import lists.SongList;
+import logic.SongVers;
+
 
 //essential to do setSongVers...if not the is favorite will make the program collapse
 
 public class SongVersCustomView extends LinearLayout {
 
 	private SongVers SVCVsongVers;
-	
+
 	class Layout
 	{
 		public Layout()
@@ -27,37 +28,37 @@ public class SongVersCustomView extends LinearLayout {
 			favoriteCheckBox = (CheckBox)findViewById(R.id.favoriteCheckBox);
 			name = (TextView)findViewById(R.id.name);
 			chordable = (TextView)findViewById(R.id.chordable);
-			
+
 			mainLayout = (LinearLayout)findViewById(R.id.mainLayout);
 			ratingLayout = (LinearLayout)findViewById(R.id.ratingLayout);
-			
+
 			ratingStarsTV = (TextView)findViewById(R.id.ratingStars);
 		}
 		LinearLayout mainLayout, ratingLayout;
 		CheckBox favoriteCheckBox;
 		TextView name, chordable, ratingStarsTV;
 	}
-	
+
 	class Events
 	{
 		public Events()
 		{
-			l.mainLayout.setOnClickListener(new OnClickListener() 
+			l.mainLayout.setOnClickListener(new OnClickListener()
 			{
 				@Override
-				public void onClick(View v) 
+				public void onClick(View v)
 				{
 					SongList.choosenSongVers = SVCVsongVers;
 					Intent i = new Intent(ctx, SongVersActivity.class);
 					i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-	                ctx.startActivity(i); 
+					ctx.startActivity(i);
 					getContext().startActivity(i);
 				}
 			});
-			l.favoriteCheckBox.setOnClickListener(new OnClickListener() 
+			l.favoriteCheckBox.setOnClickListener(new OnClickListener()
 			{
 				@Override
-				public void onClick(View v) 
+				public void onClick(View v)
 				{
 					if (l.favoriteCheckBox.isChecked())
 					{
@@ -75,23 +76,23 @@ public class SongVersCustomView extends LinearLayout {
 	}
 	Layout l;
 	Events e;
-	
+
 	Context ctx;
-	
-	public SongVersCustomView(Context context, AttributeSet attrs, SongVers currentSongVers) 
+
+	public SongVersCustomView(Context context, AttributeSet attrs, SongVers currentSongVers)
 	{
 		super(context, attrs);
 		ctx = context;
-		
+
 		LayoutInflater inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 		inflater.inflate(R.layout.song_vers_custome_view, this);
-		
+
 		l = new Layout(); e = new Events();
 		SVCVsongVers = currentSongVers;
 		isSongVersFavorite();
 	}
 
-	
+
 	private void isSongVersFavorite()
 	{
 		if(SVCVsongVers.isFavorite())
@@ -99,7 +100,7 @@ public class SongVersCustomView extends LinearLayout {
 			l.favoriteCheckBox.setChecked(true);
 		}
 	}
-	
+
 	public SongVers getSongVers() {
 		return SVCVsongVers;
 	}
@@ -107,7 +108,7 @@ public class SongVersCustomView extends LinearLayout {
 	public void setSongVers(SongVers songVers) {
 		this.SVCVsongVers = songVers;
 		l.name.setText(SVCVsongVers.getName()); //set name
-		
+
 		l.ratingStarsTV.setText("Rating :");
 		for(int i=0; i<(int)songVers.getRating(); i++) //set stars
 		{

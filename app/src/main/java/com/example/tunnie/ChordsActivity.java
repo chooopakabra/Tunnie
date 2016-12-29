@@ -5,7 +5,6 @@ import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -14,14 +13,16 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.util.LinkedList;
-import org.json.JSONException;
-import org.json.JSONObject;
 
 public class ChordsActivity extends Activity
 {
@@ -58,42 +59,42 @@ public class ChordsActivity extends Activity
   {
     public Events()
     {
-    	l.getChordDisplayBtn.setOnClickListener(new OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				if (((choosenNote!="") && (choosenTypeNote!="")) || (choosenNote!=""))
-		          {
-					currentChord = l.chordDisplayCustumeView1.getCurrentChord(choosenNote, choosenTypeNote);
-		            l.chordDisplayCustumeView1.displayCurrentChord(ChordsActivity.this, currentChord);
-		            return;
-		          }
-		          Toast.makeText(ChordsActivity.this.getApplicationContext(), "Choose Tone and chord type to display chord diagram", 1).show();
-			}
-		});
-    	l.iKnowBtn.setOnClickListener(new OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				if ((choosenNote != null) && (choosenTypeNote != null))
-		          {
-					currentChord = l.chordDisplayCustumeView1.getCurrentChord(choosenNote, choosenTypeNote);
+      l.getChordDisplayBtn.setOnClickListener(new OnClickListener() {
+        @Override
+        public void onClick(View v) {
+          if (((choosenNote!="") && (choosenTypeNote!="")) || (choosenNote!=""))
+          {
+            currentChord = l.chordDisplayCustumeView1.getCurrentChord(choosenNote, choosenTypeNote);
+            l.chordDisplayCustumeView1.displayCurrentChord(ChordsActivity.this, currentChord);
+            return;
+          }
+          Toast.makeText(ChordsActivity.this.getApplicationContext(), "Choose Tone and chord type to display chord diagram", 1).show();
+        }
+      });
+      l.iKnowBtn.setOnClickListener(new OnClickListener() {
+        @Override
+        public void onClick(View v) {
+          if ((choosenNote != null) && (choosenTypeNote != null))
+          {
+            currentChord = l.chordDisplayCustumeView1.getCurrentChord(choosenNote, choosenTypeNote);
 
-					for(int i=0; i<Util.knownChordsList.size() ; i++)
-					{
-						if (currentChord.equals(Util.knownChordsList.get(i)))
-			            {
-			            	l.iKnowBtn.setText("X");
-			            	Util.knownChordsList.add(currentChord);
-			            	getknownChordsList();
-			            	break;
-			            }
-					}
-		              l.iKnowBtn.setText("V");
-		              Util.knownChordsList.remove(currentChord);
-		              getknownChordsList();
-		          }
-				else{Toast.makeText(ctx, "Choose Tone and chord type to display chord diagram", 1).show();}
-		        }
-			});
+            for(int i=0; i<Util.knownChordsList.size() ; i++)
+            {
+              if (currentChord.equals(Util.knownChordsList.get(i)))
+              {
+                l.iKnowBtn.setText("X");
+                Util.knownChordsList.add(currentChord);
+                getknownChordsList();
+                break;
+              }
+            }
+            l.iKnowBtn.setText("V");
+            Util.knownChordsList.remove(currentChord);
+            getknownChordsList();
+          }
+          else{Toast.makeText(ctx, "Choose Tone and chord type to display chord diagram", 1).show();}
+        }
+      });
     }
 
   }
@@ -205,59 +206,59 @@ public class ChordsActivity extends Activity
     this.l.knownChordsLayout.removeAllViews();
     for (int i = 0;i < Util.knownChordsList.size();i++)
     {
-	    TextView localTextView = new TextView(this);
-	    try
-	    {
-	      localTextView.setText(Util.knownChordsList.get(i).getString("symbol"));
-	      l.knownChordsLayout.addView(localTextView);
-	    }
-	    catch (JSONException localJSONException){localJSONException.printStackTrace();}
+      TextView localTextView = new TextView(this);
+      try
+      {
+        localTextView.setText(Util.knownChordsList.get(i).getString("symbol"));
+        l.knownChordsLayout.addView(localTextView);
+      }
+      catch (JSONException localJSONException){localJSONException.printStackTrace();}
     }
   }
   private void giveACheckedTextViewListener(final CheckedTextView checkedTextView, final boolean isToneOrType) {
-	  checkedTextView.setOnClickListener(new View.OnClickListener(){
-      public void onClick(View paramAnonymousView)
-      {
-        if (isToneOrType)
-        {
+    checkedTextView.setOnClickListener(new View.OnClickListener() {
+      public void onClick(View paramAnonymousView) {
+        if (isToneOrType) {
           if (choosenNote == null) {
-        	  choosenNote =(String) checkedTextView.getText(); // choosenNote=(String) cb.getText();
-          }
-          else{
+            choosenNote = (String) checkedTextView.getText(); // choosenNote=(String) cb.getText();
+          } else {
             setNewChoosenFromLists(isToneOrType);
-            choosenNote =(String) checkedTextView.getText();
+            choosenNote = (String) checkedTextView.getText();
             checkedTextView.setChecked(true);
           }
-            checkedTextView.setBackgroundColor(Color.YELLOW);
-        }
-        else{// if i don't want recode(code hozer) here, i need to know how to get String by reference
-	        if (choosenTypeNote == null) {
-	        	choosenNote =(String) checkedTextView.getText();
-	        }
-	        else{
-	          setNewChoosenFromLists(isToneOrType);
-	          choosenNote =(String) checkedTextView.getText();
-	          checkedTextView.setChecked(true);
-	        }
-	        checkedTextView.setBackgroundColor(Color.YELLOW);
+          checkedTextView.setBackgroundColor(Color.YELLOW);
+        } else {// if i don't want recode(code hozer) here, i need to know how to get String by reference
+          if (choosenTypeNote == null) {
+            choosenNote = (String) checkedTextView.getText();
+          } else {
+            setNewChoosenFromLists(isToneOrType);
+            choosenNote = (String) checkedTextView.getText();
+            checkedTextView.setChecked(true);
+          }
+          checkedTextView.setBackgroundColor(Color.YELLOW);
         }
       }
     });
   }
-  private void setNewChoosenFromLists(boolean paramBoolean) {
-    if (paramBoolean) {}
-    for (LinkedList localLinkedList = this.toneCheckedTextViewList;; localLinkedList = this.chordTypeCheckedTextViewList)
+  private void setNewChoosenFromLists(boolean toneOrType) {
+
+
+    // give all not-choosen from the list a transparent background
+    if(toneOrType)
     {
-      int i = 0;
-      while (i < localLinkedList.size())
+      for(int i = 0 ; i< toneCheckedTextViewList.size() ; i++)
       {
-        ((CheckedTextView)localLinkedList.get(i)).setBackgroundColor(0);
-        i += 1;
+        toneCheckedTextViewList.get(i).setBackgroundColor(0);
+      }
+    }
+    else
+    {
+      for(int i = 0 ; i< chordTypeCheckedTextViewList.size() ; i++)
+      {
+        chordTypeCheckedTextViewList.get(i).setBackgroundColor(0);
       }
     }
   }
-
-
 }
 
 

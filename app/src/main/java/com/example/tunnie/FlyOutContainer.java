@@ -57,13 +57,13 @@ public class FlyOutContainer extends LinearLayout {
 		this.content = this.getChildAt(1);
 
 		this.menu.setVisibility(View.GONE);
-		
-		this.isInEditMode();  
+
+		this.isInEditMode();
 	}
 
 	@Override
 	protected void onLayout(boolean changed, int left, int top, int right,
-			int bottom) {
+							int bottom) {
 		if (changed)
 			this.calculateChildDimensions();
 
@@ -76,19 +76,19 @@ public class FlyOutContainer extends LinearLayout {
 
 	public void toggleMenu() {
 		switch (this.menuCurrentState) {
-		case CLOSED:
-			this.menuCurrentState = MenuState.OPENING;
-			this.menu.setVisibility(View.VISIBLE);
-			this.menuAnimationScroller.startScroll(0, 0, this.getMenuWidth(),
-					0, menuAnimationDuration);
-			break;
-		case OPEN:
-			this.menuCurrentState = MenuState.CLOSING;
-			this.menuAnimationScroller.startScroll(this.currentContentOffset,
-					0, -this.currentContentOffset, 0, menuAnimationDuration);
-			break;
-		default:
-			return;
+			case CLOSED:
+				this.menuCurrentState = MenuState.OPENING;
+				this.menu.setVisibility(View.VISIBLE);
+				this.menuAnimationScroller.startScroll(0, 0, this.getMenuWidth(),
+						0, menuAnimationDuration);
+				break;
+			case OPEN:
+				this.menuCurrentState = MenuState.CLOSING;
+				this.menuAnimationScroller.startScroll(this.currentContentOffset,
+						0, -this.currentContentOffset, 0, menuAnimationDuration);
+				break;
+			default:
+				return;
 		}
 
 		this.menuAnimationHandler.postDelayed(this.menuAnimationRunnable,
@@ -118,7 +118,7 @@ public class FlyOutContainer extends LinearLayout {
 		this.currentContentOffset = scrollerOffset;
 
 		this.invalidate();
-		
+
 		if (isAnimationOngoing)
 			this.menuAnimationHandler.postDelayed(this.menuAnimationRunnable,
 					menuAnimationPollingInterval);
@@ -128,15 +128,15 @@ public class FlyOutContainer extends LinearLayout {
 
 	private void onMenuTransitionComplete() {
 		switch (this.menuCurrentState) {
-		case OPENING:
-			this.menuCurrentState = MenuState.OPEN;
-			break;
-		case CLOSING:
-			this.menuCurrentState = MenuState.CLOSED;
-			this.menu.setVisibility(View.GONE);
-			break;
-		default:
-			return;
+			case OPENING:
+				this.menuCurrentState = MenuState.OPEN;
+				break;
+			case CLOSING:
+				this.menuCurrentState = MenuState.CLOSED;
+				this.menu.setVisibility(View.GONE);
+				break;
+			default:
+				return;
 		}
 	}
 
@@ -146,9 +146,9 @@ public class FlyOutContainer extends LinearLayout {
 		public float getInterpolation(float t) {
 			return (float)Math.pow(t-1, 5) + 1;
 		}
-		
+
 	}
-	
+
 	protected class AnimationRunnable implements Runnable {
 
 		@Override
