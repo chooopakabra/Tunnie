@@ -1,9 +1,6 @@
 package com.example.tunnie;
 
 
-import lists.SongList;
-import logic.Song;
-import logic.SongVers;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -12,6 +9,10 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+
+import lists.SongList;
+import logic.Song;
+import logic.SongVers;
 
 
 
