@@ -1,7 +1,35 @@
 [
     {
+        "merged": "C:\\Users\\Lenovo\\Documents\\Bandmanage\\Tunnie\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\chord_grid.png",
+        "source": "C:\\Users\\Lenovo\\Documents\\Bandmanage\\Tunnie\\app\\src\\main\\res\\drawable-ldpi\\chord_grid.png"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\Documents\\Bandmanage\\Tunnie\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\settings.png",
+        "source": "C:\\Users\\Lenovo\\Documents\\Bandmanage\\Tunnie\\app\\src\\main\\res\\drawable-ldpi\\settings.png"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\Documents\\Bandmanage\\Tunnie\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\index.png",
+        "source": "C:\\Users\\Lenovo\\Documents\\Bandmanage\\Tunnie\\app\\src\\main\\res\\drawable-ldpi\\index.png"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\Documents\\Bandmanage\\Tunnie\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\heart.jpeg",
+        "source": "C:\\Users\\Lenovo\\Documents\\Bandmanage\\Tunnie\\app\\src\\main\\res\\drawable-ldpi\\heart.jpeg"
+    },
+    {
         "merged": "C:\\Users\\Lenovo\\Desktop\\Extandush\\Tunnie\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ex.png",
         "source": "C:\\Users\\Lenovo\\Desktop\\Extandush\\Tunnie\\app\\src\\main\\res\\drawable-ldpi\\ex.png"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\Documents\\Bandmanage\\Tunnie\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\round.png",
+        "source": "C:\\Users\\Lenovo\\Documents\\Bandmanage\\Tunnie\\app\\src\\main\\res\\drawable-ldpi\\round.png"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\Documents\\Bandmanage\\Tunnie\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ex.png",
+        "source": "C:\\Users\\Lenovo\\Documents\\Bandmanage\\Tunnie\\app\\src\\main\\res\\drawable-ldpi\\ex.png"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\Documents\\Bandmanage\\Tunnie\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\i.jpeg",
+        "source": "C:\\Users\\Lenovo\\Documents\\Bandmanage\\Tunnie\\app\\src\\main\\res\\drawable-ldpi\\i.jpeg"
     },
     {
         "merged": "C:\\Users\\Lenovo\\Desktop\\Extandush\\Tunnie\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\settings.png",
@@ -28,8 +56,20 @@
         "source": "C:\\Users\\Lenovo\\Desktop\\Extandush\\Tunnie\\app\\src\\main\\res\\drawable-ldpi\\heart.jpeg"
     },
     {
+        "merged": "C:\\Users\\Lenovo\\Documents\\Bandmanage\\Tunnie\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\search_btn.jpeg",
+        "source": "C:\\Users\\Lenovo\\Documents\\Bandmanage\\Tunnie\\app\\src\\main\\res\\drawable-ldpi\\search_btn.jpeg"
+    },
+    {
         "merged": "C:\\Users\\Lenovo\\Desktop\\Extandush\\Tunnie\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\star1.jpeg",
         "source": "C:\\Users\\Lenovo\\Desktop\\Extandush\\Tunnie\\app\\src\\main\\res\\drawable-ldpi\\star1.jpeg"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\Documents\\Bandmanage\\Tunnie\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\star0.jpeg",
+        "source": "C:\\Users\\Lenovo\\Documents\\Bandmanage\\Tunnie\\app\\src\\main\\res\\drawable-ldpi\\star0.jpeg"
+    },
+    {
+        "merged": "C:\\Users\\Lenovo\\Documents\\Bandmanage\\Tunnie\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\star1.jpeg",
+        "source": "C:\\Users\\Lenovo\\Documents\\Bandmanage\\Tunnie\\app\\src\\main\\res\\drawable-ldpi\\star1.jpeg"
     },
     {
         "merged": "C:\\Users\\Lenovo\\Desktop\\Extandush\\Tunnie\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\index.png",
